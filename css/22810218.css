@@ -1,0 +1,131 @@
+:root {
+    --web1--pink: #FA97C2;
+    --web1--blue: #2FA0D5;
+    --web1--green: #73C926;
+}
+
+body {
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Changa One', cursive;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 900;
+}
+
+/* Header */
+#menu-header a {
+    display: block;
+    padding: 0 1.25rem;
+    font-weight: bold;
+    color: black;
+    font-family: 'Changa One', cursive;
+}
+
+#menu-header li.active a {
+    color: var(--web1--blue);
+}
+
+#formSearch input {
+    width: 8rem;
+}
+
+#formSearch i {
+    color: var(--web1--green);
+}
+
+/* banner */
+#banner {
+    background-image: url('../images/bg-banner.gif');
+}
+
+#banner > div {
+    background: url('../images/logo_bg.png') left top no-repeat, 
+    url('../images/logo_bg.png') right top no-repeat;
+    padding: 5rem 0 3rem 0;
+}
+
+#banner a {
+    background-color: var(--web1--pink);
+    font-family: 'Changa One', cursive;
+    font-size: 2rem;
+}
+
+#banner ol.carousel-indicators {
+    list-style: none;
+}
+
+#banner .carousel-item {
+    min-height: 15rem;
+}
+
+#banner .carousel-indicators li {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 1.2rem;
+    border: none;
+    margin: 0 0.25rem;
+    position: relative;
+}
+
+#banner .carousel-indicators li span {
+    position: absolute;
+    top: 0.3rem;
+    left: 0.3rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 0.6rem;
+    border: none;
+    text-align: left;
+    text-indent: -9999px;
+}
+
+#banner .carousel-indicators li.active span {
+    background-color: var(--web1--green);
+}
+
+/* products */
+.readmore {
+    color: var(--web1--blue);
+    margin-top: -4px !important;
+}
+
+/* about us */
+#aboutus {
+    background-color: var(--web1--pink);
+}
+
+#formSignUp {
+    border-style: dashed !important;
+    border-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* news */
+ #news .date {
+    background-color: var(--web1--green);
+ }
+
+/* footer */
+footer {
+    background-image: url('../images/bg-footer.gif');
+}
+
+#menu-footer a {
+    color: white;
+    font-weight: bold;
+    font-family: 'Changa One', cursive;
+    display: block;
+    padding: 0 2rem;
+}
+
+#menu-footer a.active {
+    color: var(--web1--pink);
+}
