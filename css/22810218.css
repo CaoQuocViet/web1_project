@@ -1,7 +1,7 @@
 :root {
-    --web1--pink: #FA97C2;
-    --web1--blue: #2FA0D5;
-    --web1--green: #73C926;
+    --web1-pink: #FA97C2;
+    --web1-blue: #2FA0D5;
+    --web1-green: #73C926;
 }
 
 body {
@@ -31,7 +31,7 @@ h1 {
 }
 
 #menu-header li.active a {
-    color: var(--web1--blue);
+    color: var(--web1-blue);
 }
 
 #formSearch input {
@@ -39,7 +39,7 @@ h1 {
 }
 
 #formSearch i {
-    color: var(--web1--green);
+    color: var(--web1-green);
 }
 
 /* banner */
@@ -54,7 +54,7 @@ h1 {
 }
 
 #banner a {
-    background-color: var(--web1--pink);
+    background-color: var(--web1-pink);
     font-family: 'Changa One', cursive;
     font-size: 2rem;
 }
@@ -89,7 +89,7 @@ h1 {
 }
 
 #banner .carousel-indicators li.active span {
-    background-color: var(--web1--green);
+    background-color: var(--web1-green);
 }
 
 #banner-small {
@@ -99,17 +99,17 @@ h1 {
 
 /* products */
 .readmore {
-    color: var(--web1--blue);
+    color: var(--web1-blue);
     margin-top: -4px !important;
 }
 
 .web1-text-blue {
-    color: var(--web1--blue);
+    color: var(--web1-blue);
 }
 
 /* about us */
 #aboutus {
-    background-color: var(--web1--pink);
+    background-color: var(--web1-pink);
 }
 
 #formSignUp {
@@ -119,7 +119,7 @@ h1 {
 
 /* news */
  #news .date {
-    background-color: var(--web1--green);
+    background-color: var(--web1-green);
     width: 6rem;
     padding: 1.5rem;
  }
@@ -138,11 +138,21 @@ footer {
 }
 
 #menu-footer a.active {
-    color: var(--web1--pink);
+    color: var(--web1-pink);
 }
 
 /* Modal Login */
 #formLogin button[type='submit'] {
-    background-color: var(--web1--blue);
+    background-color: var(--web1-blue);
     color: white;
+}
+
+/* Testimonials */
+#testimonials {
+    background-color: var(--web1-pink);
+}
+
+#testimonials .col {
+    background: url('../images/quot.png') left top no-repeat;
+    padding-left: 3rem;
 }
