@@ -117,6 +117,10 @@ h1 {
     border-color: rgba(0, 0, 0, 0.5) !important;
 }
 
+#about-us h4 {
+    color: black;
+}
+
 /* news */
  #news .date {
     background-color: var(--web1-green);
