@@ -52,7 +52,7 @@
                 ><span class=""navbar-toggler-icon></span></button>
                 <div class="collapse navbar-collapse" id="menu-header">
                     <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="index.html"
                                 >Home <span class="visually-hidden">(current)</span></a
                             >
@@ -63,7 +63,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="gallery.html">Gallery</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="blogs.html">Blogs</a>
                         </li>
                         <li class="nav-item">
@@ -96,8 +96,56 @@
             <!-- place navbar here -->
         </header>
 
+        <section id="banner-small"></section>
+
         <section class="container py-5">
-            <h1>Blogs</h1>
+            <div class="row">
+                <div class="col-8">
+                    <h1>Blogs</h1>
+                    <div class="clearfix py-3">
+                        <h3>Lorem ipsum dolor sit.</h3>
+                        <p class="text-black-50">by Super User in <a href="#">Category</a> Category on date. <a href="#">Comments (3)</a></p>
+                        <img src="images/blog/blog-thumb1.jpg" alt="blog1" class="float-start me-3 border rounded-4">
+                        <p class="text-black-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, neque maxime architecto iste sunt odit nam explicabo esse distinctio delectus facere voluptate voluptatibus cumque suscipit ad quas similique et harum!</p>
+                        <a href="#" class="btn btn-link readmore ps-0"> Read more</a>
+                    </div>
+                    <div class="clearfix py-3">
+                        <h3>Lorem ipsum dolor sit.</h3>
+                        <p class="text-black-50">by Super User in <a href="#">Category</a> Category on date. <a href="#">Comments (3)</a></p>
+                        <img src="images/blog/blog-thumb1.jpg" alt="blog1" class="float-start me-3 border rounded-4">
+                        <p class="text-black-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, neque maxime architecto iste sunt odit nam explicabo esse distinctio delectus facere voluptate voluptatibus cumque suscipit ad quas similique et harum!</p>
+                        <a href="#" class="btn btn-link readmore ps-0"> Read more</a>
+                    </div>
+                    <div class="clearfix py-3">
+                        <h3>Lorem ipsum dolor sit.</h3>
+                        <p class="text-black-50">by Super User in <a href="#">Category</a> Category on date. <a href="#">Comments (3)</a></p>
+                        <img src="images/blog/blog-thumb1.jpg" alt="blog1" class="float-start me-3 border rounded-4">
+                        <p class="text-black-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, neque maxime architecto iste sunt odit nam explicabo esse distinctio delectus facere voluptate voluptatibus cumque suscipit ad quas similique et harum!</p>
+                        <a href="#" class="btn btn-link readmore ps-0"> Read more</a>
+                    </div>
+                    <nav aria-label="Page navigation">
+                        <ul
+                            class="pagination    "
+                        >
+                            <li class="page-item disabled" aria-current="page">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                </div>
+                <div class="col-4" id="blogs-categories">
+                    <h1>Categories</h1>
+                    <ul class="py-3">
+                        <li><a class="text-black-50 text-decoration-none" href="#">Lorem ipsum dolor sit.</a></li>
+                        <li><a class="text-black-50 text-decoration-none" href="#">Lorem ipsum dolor sit.</a></li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <!--footer-->
@@ -107,7 +155,7 @@
                 id="menu-footer"
             >
                 <li class="nav-item">
-                    <a class="nav-link active" href="index.html" aria-current="page"
+                    <a class="nav-link" href="index.html" aria-current="page"
                         >Home</a
                     >
                 </li>
@@ -118,7 +166,7 @@
                     <a class="nav-link" href="gallery.html">Gallery</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="blogs.html">Blogs</a>
+                    <a class="nav-link active" href="blogs.html">Blogs</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact</a>
