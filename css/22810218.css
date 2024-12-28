@@ -92,6 +92,11 @@ h1 {
     background-color: var(--web1--green);
 }
 
+#banner-small {
+    background-image: url('../images/bg-banner.gif');
+    padding: 5px;
+}
+
 /* products */
 .readmore {
     color: var(--web1--blue);
@@ -111,6 +116,8 @@ h1 {
 /* news */
  #news .date {
     background-color: var(--web1--green);
+    width: 6rem;
+    padding: 1.5rem;
  }
 
 /* footer */
