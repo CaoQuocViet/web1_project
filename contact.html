@@ -52,7 +52,7 @@
                 ><span class=""navbar-toggler-icon></span></button>
                 <div class="collapse navbar-collapse" id="menu-header">
                     <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="index.html"
                                 >Home <span class="visually-hidden">(current)</span></a
                             >
@@ -66,7 +66,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="blogs.html">Blogs</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                         <li class="nav-item">
@@ -96,8 +96,81 @@
             <!-- place navbar here -->
         </header>
 
+        <section id="banner-small"></section>
+
         <section class="container py-5">
-            <h1>Contact</h1>
+            <h1 class="pb-3">Contact</h1>
+            <div id="map"></div>
+            <div class="row py-3">
+                <div class="col">
+                    <h1>Address</h1>
+                    <div class="py-3 text-black-50">
+                        227 Nguyen Van Cu Street<br />
+                        District 5<br />
+                        Ho Chi Minh City, Vietnam
+                    </div>
+                </div>
+                <div class="col">
+                    <h1>Phones</h1>
+                    <div class="py-3 text-black-50">
+                        (028) 62884499<br />
+                        (028) 73089899
+                    </div>
+                </div>
+                <div class="col">
+                    <h1>Email</h1>
+                    <div class="py-3 text-black-50">
+                        <a href="mailto:info@hcmus.edu.vn">info@hcmus.edu.vn</a><br />
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-3">
+                <h1>Miscellaneous information</h1>
+                <p class="text-black-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore mollitia, asperiores minima fuga impedit ratione cupiditate non placeat odit deleniti. Ipsum aliquid quaerat atque nobis eos. Aliquid consequatur totam assumenda.</p>
+                <p class="text-black-50"><i>Send an email. All fileds with an * are required</i></p>
+                <form action="#" method="post" class="text-black-50">
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="" class="form-label">Name *</label>
+                                <input type="text"  class="form-control" name="name" id="name" placeholder="" required>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="" class="form-label">Email *</label>
+                                <input type="text"  class="form-control" name="email" id="email" placeholder="" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="" class="form-label">Subject *</label>
+                                <input type="text"  class="form-control" name="subject" id="subject" placeholder="" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea class="form-control" name="message" id="message" rows="3" required></textarea>
+                    </div>
+                    <div class="text-end">
+                        <div class="form-check">
+                            <label class="form-check-label" for="copy">
+                                Send copy to yourseft&nbsp;
+                            </label>
+                            <input type="checkbox" value="1" id="copy" /> &nbsp;&nbsp;
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                            >
+                                Send email to Us
+                            </button>
+                            
+                        </div>
+                    </div>
+                </form>
+            </div>
         </section>
 
         <!--footer-->
@@ -107,7 +180,7 @@
                 id="menu-footer"
             >
                 <li class="nav-item">
-                    <a class="nav-link active" href="index.html" aria-current="page"
+                    <a class="nav-link" href="index.html" aria-current="page"
                         >Home</a
                     >
                 </li>
@@ -121,7 +194,7 @@
                     <a class="nav-link" href="blogs.html">Blogs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link active" href="contact.html">Contact</a>
                 </li>
                 <li class="nav-item">
                     <a 
@@ -201,5 +274,10 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+
+        <!-- Google Maps API -->
+         <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+
+         <script src="js/map.js"></script>
     </body>
 </html>

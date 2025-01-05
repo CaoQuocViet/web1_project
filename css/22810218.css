@@ -167,3 +167,14 @@ footer {
     background: url('../images/marker1.png') 0 0.25rem no-repeat;
     padding: 0 0 0.75rem 1.5rem;
 }
+
+/* Contact */
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: var(--web1-blue) !important;
+    border: none;
+}
