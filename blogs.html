@@ -258,7 +258,8 @@
         </div>
         <div class="py-3">
             <h3>Leave your comments</h3>
-            <form action="#" method="post" class="text-black-50">
+            <form action="#" method="post" class="text-black-50" onsubmit="addComment(event)">
+                <input type="hidden" name="blogId" id="blogId" value="{{id}}"/>
                 <div class="row">
                     <div class="col-4">
                         <div class="mb-3">
@@ -275,7 +276,7 @@
                 </div>
                 <div>
                     <div class="mb-3">
-                        <textarea class="form-control" name="message" id="message" rows="3" placeholder="Enter your message" required></textarea>
+                        <textarea class="form-control" name="comment" id="comment" rows="3" placeholder="Enter your comment" required></textarea>
                     </div>
                 </div>
                 <div class="row">
@@ -288,6 +289,9 @@
                     <div class="col text-end">
                         <button class="btn btn-link py-0 my-0" type="submit">Submit Comment</button>
                     </div>
+                </div>
+                <div class="text-center">
+                    <div class="text-success" id="responseMessage"></div>
                 </div>
             </form>
         </div>
@@ -340,8 +344,46 @@
 
         async function loadBlogDetails(blogId, gotoComments = false) {
             await loadData(`blogs/${blogId}`, 'details-template', 'blogs');
+            checkLogin();
             if (gotoComments) {
                 window.location.href = "#comments";
+            }
+        }
+
+        async function addComment(e) {
+            e.preventDefault();
+
+            let token = localStorage.getItem('token');
+            let postData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                comment: document.getElementById('comment').value,
+                blogId: document.getElementById('blogId').value,
+                agree: (document.getElementById('agree').value == 1)
+            }
+            let responseMessage = document.getElementById('responseMessage');
+
+            try {
+                let response = await fetch(`${AUTHENTICATE_API}/comments`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify(postData)
+                });
+                let result = await response.json();
+                if(response.status == 200) {
+                    responseMessage.innerHTML = result.message;
+                    responseMessage.className = 'text-success';
+                    loadBlogDetails(postData.blogId, true);
+                } else {
+                    throw new Error(result.message);
+                }
+            } catch (error) {
+                responseMessage.innerHTML = error.message;
+                responseMessage.className = 'text-danger';
             }
         }
     </script>

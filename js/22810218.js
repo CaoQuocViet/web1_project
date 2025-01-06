@@ -63,6 +63,11 @@ function displayControls(isLogin = true) {
         linkLogins[i].style.display = displayLogin;
         linkLogouts[i].style.display = displayLogout;
     }
+
+    let leaveComment = document.getElementById('leaveComment');
+    if(leaveComment) {
+        leaveComment.style.display = displayLogout;
+    }
 }
 
 async function checkLogin() {
