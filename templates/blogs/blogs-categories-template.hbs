@@ -1,0 +1,9 @@
+<h1>Categories</h1>
+<ul class="py-3">
+    {{#each data}}
+    <li>
+        <a class="text-black-50 text-decoration-none" href="#"
+            onclick="loadBlogs('blogs/categories/{{id}}')">{{name}}</a>
+    </li>
+    {{/each}}
+</ul>

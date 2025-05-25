@@ -1,0 +1,11 @@
+<div class="row text-center py-5">
+    {{#each data}}
+    <div class="col-lg-3 col-md-6 col-sm-12">
+        <img src="{{imagepath}}" alt="{{name}}" onmouseover="setActiveImagepath(this, '{{imagepath}}')"
+            onmouseout="setActiveImagepath(this, '{{imagepath}}', false)">
+        <h3>{{name}}</h3>
+        <p class="text-black-50">{{summary}}</p>
+        <a class="readmore btn btn-link pt-0" href="?request=products/{{id}}">Read more</a>
+    </div>
+    {{/each}}
+</div>

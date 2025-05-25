@@ -1,0 +1,17 @@
+<h1 class="text-black-10">News</h1>
+<div class="row py-3">
+    {{#each data}}
+    <div class="col">
+        <div class="float-start me-3">
+            <div class="date text-white text-center rounded-4 py-1">
+                <h3>{{date}}</h3>
+            </div>
+            <a href="?request=news/{{id}}" class="btn btn-link readmore ps-0">Read more</a>
+        </div>
+        <div>
+            <h3>{{name}}</h3>
+            <p class="text-black-50">{{summary}}</p>
+        </div>
+    </div>
+    {{/each}}
+</div>
