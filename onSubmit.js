@@ -1,3 +1,7 @@
+const CAPTCHA_SITE_KEY = "6Legi0crAAAAAAJmEsTqim7trqoVVJzmDUJZZEh9";
+const CAPTCHA_PROJECT_ID = "web1-22810218-460813";
+const CAPTCHA_API_KEY = "AIzaSyAz4fEcfdl9rZnICmHRmI7SO2RTapMvZXc";
+
 function onSubmit(e) {
     e.preventDefault();
 

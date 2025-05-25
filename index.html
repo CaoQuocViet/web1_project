@@ -372,64 +372,21 @@
         ></script>
 
         <!--handlebars-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js" integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.runtime.min.js" integrity="sha512-WUaZk9J3oknQdKPT2wAfA0gEBG2371l1ACjiynLA/X28p07n1u59VFk7q1i83/bo7N9rqVdYKlnvwAAiwL36jQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="js/index.templates.js"></script>
         
         <script src="js/22810218.js"></script>
-
-        <script id="products-template" type="text/x-handlebars-template">
-            <div class="row text-center py-5">
-                {{#each data}}
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                   <img src="{{imagepath}}" alt="{{name}}"
-                        onmouseover="setActiveImagepath(this, '{{imagepath}}')"
-                        onmouseout="setActiveImagepath(this, '{{imagepath}}', false)"
-                   >
-                   <h3>{{name}}</h3>
-                   <p class="text-black-50">{{summary}}</p>
-                   <a class="readmore btn btn-link pt-0" href="#"
-                        onclick="loadData('products/{{id}}', 'details-template', 'content')"
-                   >Read more</a>
-                </div>
-                {{/each}}
-           </div>
-        </script>
-
-        <script id="news-template" type="text/x-handlebars-template">
-            <h1 class="text-black-10">News</h1>
-            <div class="row py-3">
-                {{#each data}}
-                <div class="col">
-                    <div class="float-start me-3">
-                        <div class="date text-white text-center rounded-4 py-1">
-                            <h3>{{date}}</h3>
-                        </div>
-                        <a href="#" class="btn btn-link readmore ps-0"
-                            onclick="loadData('news/{{id}}', 'details-template', 'content')"
-                        >Read more</a>
-                    </div>
-                    <div>
-                        <h3>{{name}}</h3>
-                        <p class="text-black-50">{{summary}}</p>
-                    </div>
-                </div>
-                {{/each}}
-            </div>
-        </script>
-
-        <script id="details-template" type="text/x-handlebars-template">
-            <section class="container-fluid" id="banner-small"></section>
-            {{#each data}}
-            <section class="container py-5">
-                <h1 class="pb-3">{{name}}</h1>
-                <div class="text-black-50">{{{description}}}</div>
-            </section>
-            {{/each}}
-        </script>
             
         <script>
-            checkLogin();
-            loadData('products', 'products-template', 'products');
-            loadData('news', 'news-template', 'news');
+            let searchParams = new URLSearchParams(location.search);
+            let request = searchParams.get('request');
+            if(request) {
+                loadData(request, 'details-template', 'content');
+            } else {
+                checkLogin();
+                loadData('products', 'products-template', 'products');
+                loadData('news', 'news-template', 'news');
+            }
 
             function setActiveImagepath(img, imagepath,isActive = true) {
                 if (isActive) {

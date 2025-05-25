@@ -203,82 +203,10 @@
         crossorigin="anonymous"></script>
 
     <!--handlebars-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"
-        integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.runtime.min.js" integrity="sha512-WUaZk9J3oknQdKPT2wAfA0gEBG2371l1ACjiynLA/X28p07n1u59VFk7q1i83/bo7N9rqVdYKlnvwAAiwL36jQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/about.templates.js"></script>
+    
     <script src="js/22810218.js"></script>
-
-    <script id="about-us-template" type="text/x-handlebars-template">
-        {{#each data}}
-        <h1 class="py-3">{{name}}</h1>
-        <div>
-            <img src="{{thumbpath}}" alt="{{name}}" class="float-start rounded-4 me-3">
-            <div class="text-black-50">{{{summary}}}</div>
-            <a href="#" class="btn btn-link readmore ps-0"
-                onclick="loadData('aboutus/{{id}}', 'details-template', 'content')"
-            >
-                Read more
-            </a>
-        </div>
-        {{/each}}
-    </script>
-
-    <script id="visions-template" type="text/x-handlebars-template">
-        {{#each data}}
-        <h1 class="py-3">Our vision</h1>
-        <div class="clearfix mb-3">
-            <a  class="text-decoration-none" 
-                onclick="loadData('visions/{{id}}', 'details-template', 'content')">
-                <img src="{{thumbpath}}" alt="name" class="float-start rounded-4 me-3">
-                <h3 class="text-black">{{name}}</h3>
-                <p class="text-black-50">{{summary}}</p>
-            </a>
-        </div>
-        {{/each}}
-    </script>
-
-
-    <script id="details-template" type="text/x-handlebars-template">
-        <div class="container py-5 overflow-auto">
-            {{#each data}}
-            <h1 class="py-3">{{name}}</h1>
-            <img src="{{imagepath}}" alt="{{name}}" class="float-start rounded-4 me-3">
-            <p>{{{description}}}</p>
-            {{/each}}
-        </div>
-    </script>
-
-    <script id="testimonials-template" type="text/x-handlebars-template">
-        <div class="container">
-            <h1 class="text-white">Testimonials</h1>
-            <div class="row py-3">
-                {{#each data}}
-                <div class="col">
-                    <p class="text-black-50">{{summary}}</p>
-                    <span class="text-white">{{name}}</span><br />
-                    <a href="#">{{email}}</a>
-                </div>
-                {{/each}}
-            </div>
-        </div>
-    </script>
-
-    <script id="our-team-template" type="text/x-handlebars-template">
-        <h1>Our Team</h1>
-        <div class="row py-3">
-            {{#each data}}
-            <div class="col">
-                <a class="text-decoration-none" href="#"
-                    onclick="loadData('team/{{id}}', 'details-template', 'content')">
-                    <img src="{{thumbpath}}" alt="{{name}}" class="rounded-4 mb-3 img-fluid">
-                    <h4 class="text-black">{{name}}</h4>
-                    <p class="text-black-50">{{summary}}</p>
-                </a>
-            </div>
-            {{/each}}
-        </div>
-    </script>
 
     <script>
         checkLogin();

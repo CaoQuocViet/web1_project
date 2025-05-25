@@ -309,33 +309,12 @@
         <script src="js/map.js"></script>
 
         <!-- Google recapcha -->
-        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfvYK8qAAAAAKWDyVjbh_5ufBJ9KqXVpz1G2Bpk"></script>
+        <script src="https://www.google.com/recaptcha/enterprise.js?render=6Legi0crAAAAAAJmEsTqim7trqoVVJzmDUJZZEh9"></script>
+        <script src="onSubmit.js"></script>
 
         <script src="js/22810218.js"></script>
 
         <script>
-            function onSubmit(e) {
-                e.preventDefault();
-                grecaptcha.enterprise.ready(async () => {
-                const token = await grecaptcha.enterprise.execute('6LfvYK8qAAAAAKWDyVjbh_5ufBJ9KqXVpz1G2Bpk', {action: 'submit'});
-                    let response = await fetch('verify.php', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Accept': 'application/json'
-                        },
-                        body: JSON.stringify({'g-token': token})
-                    });
-                    if(response.status == 200) {
-                        sendMail();
-                    } else {
-                        let responseMessage = document.getElementById('responseMessage');
-                        responseMessage.innerHTML = 'Error: Can not verify RECAPCHA';
-                        responseMessage.className = 'text-danger';
-                    }
-                });
-            }
-
             async function sendMail() {
                 let responseMessage = document.getElementById('responseMessage');
                 try {
