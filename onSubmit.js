@@ -5,7 +5,7 @@ const CAPTCHA_API_KEY = "AIzaSyAz4fEcfdl9rZnICmHRmI7SO2RTapMvZXc";
 function onSubmit(e) {
     e.preventDefault();
 
-    let responseMessage = document.getElementById('response');
+    let responseMessage = document.getElementById('responseMessage');
     responseMessage.className = 'text-success';
     responseMessage.innerHTML = '';
 
